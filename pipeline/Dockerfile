@@ -17,8 +17,8 @@ COPY src ./src
 # Install dependencies from the lockfile
 RUN uv sync --locked
 
-# Copy the pipeline.py file to the working directory
-COPY pipeline.py ./
+# Copy the ingest_data.py file to the working directory
+COPY ingest_data.py ./
 
-# Set the entrypoint to run the pipeline.py script using Python
-ENTRYPOINT ["python", "pipeline.py"]
+# Set the entrypoint to run the ingest_data.py script using Python
+ENTRYPOINT ["python", "ingest_data.py"]
